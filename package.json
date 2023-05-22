@@ -23,6 +23,7 @@
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "make": "electron-forge make",
     "package": "electron-forge package",
+    "postinstall": "./scripts/postinstall.sh",
     "start": "npm run build && electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc -w"
