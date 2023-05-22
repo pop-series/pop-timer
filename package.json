@@ -9,6 +9,7 @@
     "@typescript-eslint/parser": "4.33.0",
     "electron": "24.3.1",
     "eslint": "7.32.0",
+    "prettier": "2.8.8",
     "typescript": "4.8.3"
   },
   "name": "pop-timer",
@@ -17,12 +18,14 @@
   "main": "./dist/main.js",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
+    "check": "prettier --check .",
+    "format": "prettier --write .",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "make": "electron-forge make",
+    "package": "electron-forge package",
     "start": "npm run build && electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,11 @@
+bin
+build
+data/generated
+docs/generated
+dist
+include
+lib
+logs
+node_modules
+out
+tmp
