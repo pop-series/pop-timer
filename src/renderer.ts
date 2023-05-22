@@ -72,7 +72,7 @@ class Timer {
   private resume(): TimerState {
     this.refEpochMillis = Date.now();
     this.intervalId = setInterval(() => {
-      let note = new Note(this.elapsed(), this.laps);
+      const note = new Note(this.elapsed(), this.laps);
       this.notifiers.forEach((_) => _(note));
     }, this.notifFreqMillis);
     this.state = TimerState.RUNNING;
@@ -98,12 +98,14 @@ class Timer {
     }
     this.laps.length = 0;
     this.state = TimerState.INITIALIZED;
-    let note = new Note(this.elapsed(), this.laps);
+    const note = new Note(this.elapsed(), this.laps);
     this.notifiers.forEach((_) => _(note));
     return this.state;
   }
 
-  public lap() {}
+  public lap() {
+    console.log("TBD")
+  }
 
   private elapsed(): Timing {
     const currEpochMillis = Date.now();
@@ -137,7 +139,6 @@ class ClockRenderer {
 }
 
 const ZERO_TIMING = createTiming(0);
-const clockElement = document.getElementById("clock");
 const resetButton = document.getElementById("reset");
 const controlButton = document.getElementById("control");
 const lapButton = document.getElementById("lap");
