@@ -10,6 +10,8 @@ init() {
 
 validate() {
     ($RUN_CMD --prefix $TOP_LEVEL_DIR check) || VALIDATION_FAILURES="$((VALIDATION_FAILURES+1))"
+
+    ($RUN_CMD --prefix $TOP_LEVEL_DIR lint) || VALIDATION_FAILURES="$((VALIDATION_FAILURES+1))"
 }
 
 
