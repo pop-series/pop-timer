@@ -104,7 +104,7 @@ class Timer {
   }
 
   public lap() {
-    console.log("TBD")
+    console.log("TBD");
   }
 
   private elapsed(): Timing {
