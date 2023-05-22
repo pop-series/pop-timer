@@ -15,10 +15,28 @@
     <link href="./styles.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>, Chromium
-    <span id="chrome-version"></span>, and Electron
-    <span id="electron-version"></span>.
+    <div id="timer">
+      <h1>Timer</h1>
+      <div id="clock-display" class="table">
+        <div class="row header">
+          <div class="cell">HH</div>
+          <div class="cell">MM</div>
+          <div class="cell">SS</div>
+          <div class="cell">MS</div>
+        </div>
+        <div class="row">
+          <div id="hh-display" class="cell"></div>
+          <div id="mm-display" class="cell"></div>
+          <div id="ss-display" class="cell"></div>
+          <div id="ms-display" class="cell"></div>
+        </div>
+      </div>
+      <div id="clock" class="clock-display"></div>
+      <button id="reset">reset</button>
+      <button id="control">control</button>
+      <button id="lap">lap</button>
+      <div id="lap-info"></div>
+    </div>
 
     <script src="./dist/renderer.js"></script>
   </body>

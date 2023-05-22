@@ -1,0 +1,29 @@
+.clock-display {
+    min-width: 100px;
+    min-height: 100px;
+}
+
+#clock-display {
+    font-family: 'Courier New', Courier, monospace
+}
+
+#clock-display .table {
+    display: table;
+    width: 200px;
+    border-collapse: collapse;
+  }
+  
+#clock-display .row {
+    display: table-row;
+  }
+  
+  #clock-display .row.header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  #clock-display .cell {
+    display: table-cell;
+    padding: 4px;
+    border: 1px solid #ccc;
+  }
